@@ -27,7 +27,7 @@ if available == True:
     conn = smtplib.SMTP('smtp.gmail.com', 587) # smtp address and port
     conn.ehlo() # call this to start the connection
     conn.starttls() # starts tls encryption. When we send our password it will be encrypted.
-    conn.login('youremail@gmail.com, 'appkey')
+    conn.login('youremail@gmail.com', 'appkey')
     conn.sendmail('youremail@gmail.com', toAddress, 'Subject: Borzaska Alert!\n\nAttention!\n\nYour favourite food is available today!\n\nBon apetite!:\nFood Notifier V1.0')
     conn.quit()
     print('Sent notificaton e-mails for the following recipients:\n')
